@@ -133,4 +133,5 @@ public class NetworkController : MonoBehaviourPunCallbacks
     {
         Debug.Log($"O player: {otherPlayer} saiu da sala {PhotonNetwork.CurrentRoom}");
     }
+
 }

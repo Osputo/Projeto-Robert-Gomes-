@@ -101,7 +101,7 @@ public class CamControlPlayer2 : MonoBehaviour
                     {
                         if (Input.GetButtonDown("Fire1"))
                         {
-                            hit.collider.SendMessage("Interaction2", SendMessageOptions.DontRequireReceiver);
+                            hit.collider.SendMessage("Interaction", SendMessageOptions.DontRequireReceiver);
 
                         }
                     }
