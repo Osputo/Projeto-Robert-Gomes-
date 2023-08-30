@@ -43,6 +43,7 @@ MonoBehaviour:
   - Interaction2
   - teste
   - RayCastAct
+  - LigthRCP
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
