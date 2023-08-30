@@ -8,30 +8,33 @@ public class Door : MonoBehaviour
 {
     Animator anim;
     player player;
+    PhotonView phview;
 
-    
 
     // Start is called before the first frame update
     void Start()
     {
       
-        anim = GetComponentInParent<Animator>();
+        anim = GetComponent<Animator>();
         player = FindObjectOfType(typeof(player)) as player;
+        phview = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     public void Interaction()
     {
-        anim.SetBool("open", !anim.GetBool("open"));
+        phview.RPC("DoorRPC", RpcTarget.AllBuffered);
     }
 
     
     public void Interaction2()
+    {
+        phview.RPC("DoorRPC", RpcTarget.AllBuffered);
+    }
+
+
+    [PunRPC]
+    public void DoorRPC()
     {
         anim.SetBool("open", !anim.GetBool("open"));
     }

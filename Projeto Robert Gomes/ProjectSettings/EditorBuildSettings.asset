@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: 4ed6d219d1812014d80dc432fde14a46
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DentroDaEscola.unity
     guid: 9a3aef8df150bf2449ac5c102b08eba4
+  - enabled: 1
+    path: Assets/Scenes/DemoAsteroids-LobbyScene 1.unity
+    guid: 09cabc27806097a429b66a29e902c05a
+  - enabled: 1
+    path: Assets/Scenes/AtividadeXande.unity
+    guid: 5205404d4a139e649ba4d483a5f81e41
   m_configObjects: {}

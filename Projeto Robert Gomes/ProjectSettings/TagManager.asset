@@ -6,6 +6,7 @@ TagManager:
   tags:
   - lux
   - Interact
+  - Block
   layers:
   - Default
   - TransparentFX

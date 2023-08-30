@@ -12,16 +12,17 @@ public class securityCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
+        phview = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        anim = GetComponentInParent<Animator>();
+        
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -30,7 +31,15 @@ public class securityCamera : MonoBehaviour
             
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
 
+            phview.RPC("LigthRCP", RpcTarget.AllBuffered);
+
+        }
+    }
 
 
 
