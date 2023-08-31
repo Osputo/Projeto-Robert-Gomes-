@@ -15,6 +15,7 @@ public class camControl2 : MonoBehaviour
     float smoothCoefX = 1.5f, smoothCoefY=1.5f;
     float range = 1.7f;
 
+
     public Image canvaCursor;
     // Start is called before the first frame update
     void Start()

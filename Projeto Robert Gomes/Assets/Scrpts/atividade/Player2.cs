@@ -55,6 +55,15 @@ public class Player2 : MonoBehaviour
 
 
     }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("jump"))
+        {
+            rb.AddForce(transform.up * 7.5f, ForceMode.Impulse);
+        }
+    }
     [PunRPC]
     public void RPCTradeMaterial(string target)
     {

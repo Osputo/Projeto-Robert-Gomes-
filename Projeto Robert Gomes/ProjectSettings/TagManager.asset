@@ -7,6 +7,8 @@ TagManager:
   - lux
   - Interact
   - Block
+  - Key
+  - jump
   layers:
   - Default
   - TransparentFX
