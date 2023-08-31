@@ -980,7 +980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forwardSpeed: 5
   strafeSpeed: 2
-  maxJumpHeight: 2
+  maxJumpHeight: 0.5
   timeToMaxHeight: 0.5
   chave: 0
   state: 0
