@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
@@ -17,7 +16,7 @@ public class player : MonoBehaviour
     float gravity, jumpSpeed;
     public float forwardSpeed = 5, strafeSpeed = 2;
     public float maxJumpHeight = 2, timeToMaxHeight = 0.5f;
-    public bool chave=false;
+    public bool chave = false;
     public camState state = camState.normal;
     PhotonView phView;
 
@@ -27,7 +26,7 @@ public class player : MonoBehaviour
         gravity = (-2 * maxJumpHeight) / (timeToMaxHeight * timeToMaxHeight);
         jumpSpeed = (2 * maxJumpHeight) / timeToMaxHeight;
 
-        phView = GetComponent<PhotonView>();    
+        phView = GetComponent<PhotonView>();
 
     }
 
@@ -64,5 +63,26 @@ public class player : MonoBehaviour
                     break;
             }
         }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+
+
+        Debug.Log("no mames");
+        vertical += gravity * Time.deltaTime * Vector3.up;
+        if (controller.isGrounded)
+        {
+
+            Debug.Log("no mames2");
+            if (collision.gameObject.tag == "pulo")
+            {
+                Debug.Log("no mames3");
+                vertical = (jumpSpeed * 3) * Vector3.up;
+            }
+        }
+            
+
+
     }
 }

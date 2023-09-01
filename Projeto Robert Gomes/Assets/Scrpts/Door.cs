@@ -26,16 +26,19 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     public void Interaction()
     {
+
         phview.RPC("DoorRPC", RpcTarget.AllBuffered);
+
+        GetComponent<PhotonView>().RPC("RPCInteract", RpcTarget.AllBuffered);
+
     }
 
-    
+
     public void Interaction2()
-    {       
+    {
         phview.RPC("DoorRPC", RpcTarget.AllBuffered);
+
     }
-
-
     [PunRPC]
     public void DoorRPC()
     {
