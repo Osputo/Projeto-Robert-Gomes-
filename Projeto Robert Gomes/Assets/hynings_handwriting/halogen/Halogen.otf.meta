@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: cbb07955ef488404688fad959a4c9c90
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Halogen
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 90d76bcfa9cf2aa44bd697531b941680, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
