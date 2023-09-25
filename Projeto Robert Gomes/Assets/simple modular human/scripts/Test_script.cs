@@ -37,9 +37,9 @@ public class Test_script : MonoBehaviour
     public bool steal;
     public bool pick_up;
 
-   public bool destermine_new_aim;
+   public bool destermine_new_aim = true;
 
-
+    
 
     void Start()
     {
@@ -168,66 +168,34 @@ public class Test_script : MonoBehaviour
 
     void Update()
     {
-
+        /*
         if(!ready)
         {
             return;
-        }
+        }*/
 
      
         if(!destermine_new_aim)
         {
             int what_to_choose = UnityEngine.Random.Range(0, 5);
-
+            print("entrou");
            
 
-            walk = false;
-            run = false;
-            sit = false;
-            steal = false;
-            pick_up = false;
+            walk = what_to_choose == 0;
+            run = what_to_choose == 1;
+            sit = what_to_choose == 2;
+            steal = what_to_choose == 3;
+            pick_up = what_to_choose == 4;
 
 
 
-            if(what_to_choose == 0)
+            if(what_to_choose != 0)
             {
-                walk = true;
-
                 int Which_point = UnityEngine.Random.Range(0, way_points.Count);
                 aim_point = way_points[Which_point].gameObject;
                 destermine_new_aim = true;
-            }
-            if (what_to_choose == 1)
-            {
-                run = true;
 
-                int Which_point = UnityEngine.Random.Range(0, way_points.Count );
-                aim_point = way_points[Which_point].gameObject;
-                destermine_new_aim = true;
-            }
-            if (what_to_choose == 2)
-            {
-                sit = true;
 
-                int Which_point = UnityEngine.Random.Range(0, Sitting_points.Count );
-                aim_point = Sitting_points[Which_point].gameObject;
-                destermine_new_aim = true;
-            }
-            if (what_to_choose == 3)
-            {
-                steal = true;
-
-                int Which_point = UnityEngine.Random.Range(0, Stealing_points.Count );
-                aim_point = Stealing_points[Which_point].gameObject;
-                destermine_new_aim = true;
-            }
-            if (what_to_choose == 4)
-            {
-                pick_up = true;
-
-                int Which_point = UnityEngine.Random.Range(0, pick_up_points.Count );
-                aim_point = pick_up_points[Which_point].gameObject;
-                destermine_new_aim = true;
             }
 
         }
@@ -235,7 +203,7 @@ public class Test_script : MonoBehaviour
         {
             if (walk)
             {
-
+                print("entrou");
                 if (Vector3.Distance(transform.position,aim_point.transform.position) > 0.25f)
                 {
                    
