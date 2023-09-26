@@ -302,7 +302,15 @@ namespace Photon.Pun.Demo.Asteroids
 
             return true;
         }
-        
+
+        //esse é usando aquele coisa pronto do photon
+
+        public void DiconnectButton()
+        {
+            PhotonNetwork.Disconnect();
+            this.SetActivePanel(LoginPanel.name);
+        }
+
         private void ClearRoomListView()
         {
             foreach (GameObject entry in roomListEntries.Values)
