@@ -35,7 +35,7 @@ RectTransform:
   - {fileID: 1793324317}
   - {fileID: 6959868574606339472}
   m_Father: {fileID: 7432384272433747546}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -654,6 +654,82 @@ MonoBehaviour:
   dialogueText: {fileID: 1793324318}
   speedText: 0
   animator: {fileID: 75426826}
+--- !u!1 &7348613259625736956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5334548985298980737}
+  - component: {fileID: 6975606863616340948}
+  - component: {fileID: 7287825173178799043}
+  m_Layer: 5
+  m_Name: BookImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5334548985298980737
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7348613259625736956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7432384272433747546}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -893, y: 463}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6975606863616340948
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7348613259625736956}
+  m_CullTransparentMesh: 1
+--- !u!114 &7287825173178799043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7348613259625736956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1001 &2870151481280593501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -661,6 +737,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5783981757230227159}
     m_Modifications:
+    - target: {fileID: 4527455882270246749, guid: e3165b0dcf0a07b4282a62da051bb448, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4679787083455752195, guid: e3165b0dcf0a07b4282a62da051bb448, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -983,4 +1063,45 @@ MonoBehaviour:
   maxJumpHeight: 0.5
   timeToMaxHeight: 0.5
   chave: 0
+  dire: 0
+  aluno: 0
+  joao: 0
+  ingle: 0
+  puz1: 0
+  faxi: 0
+  balde: 0
+  esfre: 0
+  sabao: 0
+  luva: 0
+  paper: 0
+  puz3: 0
+  aud: 0
+  paper1: 0
+  paper2: 0
+  paper3: 0
+  paper4: 0
+  paper5: 0
+  paper6: 0
+  paper7: 0
+  paper8: 0
+  paper9: 0
+  paper10: 0
+  paper11: 0
+  neuza: 0
+  hudson: 0
+  exandro: 0
+  david: 0
+  igor: 0
+  clovis: 0
+  sonia: 0
+  secretaria: 0
+  fun: 0
+  paulo: 0
+  edson: 0
+  cubas: 0
+  lucio: 0
+  karen: 0
+  celia: 0
+  james: 0
+  pallaoro: 0
   state: 0
