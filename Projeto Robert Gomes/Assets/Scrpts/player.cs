@@ -17,6 +17,8 @@ public class player : MonoBehaviour
     public float forwardSpeed = 5, strafeSpeed = 2;
     public float maxJumpHeight = 2, timeToMaxHeight = 0.5f;
 
+    public GameObject book;
+
 
 
     /*public bool chave = false, dire = false, aluno = false, joao = false, ingle = false, puz1 = false, faxi = false, balde = false, esfre = false, sabao = false, luva = false, paper = false, puz3 = false, aud = false; //itens de missões
@@ -67,15 +69,20 @@ public class player : MonoBehaviour
 
                     if (Input.GetButtonDown("Book"))
                     {
-
-
+                        book.SetActive(true);
+                        state = camState.dialogue;
                     }
 
                     break;
 
                 case camState.dialogue:
 
+                    if (Input.GetButtonDown("Book"))
+                    {
 
+                        book.SetActive(false);
+                        state = camState.normal;
+                    }
                     break;
             }
         }

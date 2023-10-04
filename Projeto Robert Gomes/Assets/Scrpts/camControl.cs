@@ -56,6 +56,10 @@ public class camControl : MonoBehaviour
         {
             case camState.normal:
 
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+
+
                 FpsCamera();
 
                 RaycastHit hit2;
@@ -82,8 +86,8 @@ public class camControl : MonoBehaviour
 
                 inte.SetActive(false);
 
-
-
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
                 break;
 
         }
