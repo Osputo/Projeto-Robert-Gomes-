@@ -16,10 +16,13 @@ public class player : MonoBehaviour
     float gravity, jumpSpeed;
     public float forwardSpeed = 5, strafeSpeed = 2;
     public float maxJumpHeight = 2, timeToMaxHeight = 0.5f;
-    public bool chave = false, dire = false, aluno = false, joao = false, ingle = false, puz1 = false, faxi = false, balde = false, esfre = false, sabao = false, luva = false, paper = false, puz3 = false, aud = false; //itens de missões
+
+
+
+    /*public bool chave = false, dire = false, aluno = false, joao = false, ingle = false, puz1 = false, faxi = false, balde = false, esfre = false, sabao = false, luva = false, paper = false, puz3 = false, aud = false; //itens de missões
     public bool paper1 = false, paper2 = false, paper3 = false, paper4 = false, paper5 = false, paper6 = false, paper7 = false, paper8 = false, paper9 = false, paper10 = false, paper11 = false; //Papeis
     public bool neuza = false, hudson = false, exandro = false, david = false, igor = false, clovis = false, sonia = false, secretaria = false, fun = false; //Professores e Empregados
-    public bool paulo = false, edson = false, cubas = false, lucio = false, karen = false, celia = false, james = false, pallaoro = false; //Alunos
+    public bool paulo = false, edson = false, cubas = false, lucio = false, karen = false, celia = false, james = false, pallaoro = false; //Alunos*/
     public camState state = camState.normal;
     PhotonView phView;
 
@@ -60,9 +63,19 @@ public class player : MonoBehaviour
                     Vector3 finalVelocity = forward + strafe + vertical;
                     controller.Move(finalVelocity * Time.deltaTime);
 
+
+
+                    if (Input.GetButtonDown("Book"))
+                    {
+
+
+                    }
+
                     break;
 
                 case camState.dialogue:
+
+
                     break;
             }
         }
