@@ -983,4 +983,45 @@ MonoBehaviour:
   maxJumpHeight: 0.5
   timeToMaxHeight: 0.5
   chave: 0
+  dire: 0
+  aluno: 0
+  joao: 0
+  ingle: 0
+  puz1: 0
+  faxi: 0
+  balde: 0
+  esfre: 0
+  sabao: 0
+  luva: 0
+  paper: 0
+  puz3: 0
+  aud: 0
+  paper1: 0
+  paper2: 0
+  paper3: 0
+  paper4: 0
+  paper5: 0
+  paper6: 0
+  paper7: 0
+  paper8: 0
+  paper9: 0
+  paper10: 0
+  paper11: 0
+  neuza: 0
+  hudson: 0
+  exandro: 0
+  david: 0
+  igor: 0
+  clovis: 0
+  sonia: 0
+  secretaria: 0
+  fun: 0
+  paulo: 0
+  edson: 0
+  cubas: 0
+  lucio: 0
+  karen: 0
+  celia: 0
+  james: 0
+  pallaoro: 0
   state: 0
