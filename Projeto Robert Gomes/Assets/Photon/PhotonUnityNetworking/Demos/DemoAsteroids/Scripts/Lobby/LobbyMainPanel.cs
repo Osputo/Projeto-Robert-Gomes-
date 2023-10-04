@@ -15,7 +15,7 @@ namespace Photon.Pun.Demo.Asteroids
 
         [Header("Selection Panel")]
         public GameObject SelectionPanel;
-        
+
         [Header("Create Room Panel")]
         public GameObject CreateRoomPanel;
 
@@ -272,7 +272,7 @@ namespace Photon.Pun.Demo.Asteroids
             PhotonNetwork.CurrentRoom.IsOpen = false;
             PhotonNetwork.CurrentRoom.IsVisible = false;
 
-            PhotonNetwork.LoadLevel("DentroDaEscola");
+            PhotonNetwork.LoadLevel("DemoAsteroids-GameScene");
         }
 
         #endregion
@@ -302,15 +302,7 @@ namespace Photon.Pun.Demo.Asteroids
 
             return true;
         }
-
-        //esse é usando aquele coisa pronto do photon
-
-        public void DiconnectButton()
-        {
-            PhotonNetwork.Disconnect();
-            this.SetActivePanel(LoginPanel.name);
-        }
-
+        
         private void ClearRoomListView()
         {
             foreach (GameObject entry in roomListEntries.Values)
@@ -335,7 +327,7 @@ namespace Photon.Pun.Demo.Asteroids
             RoomListPanel.SetActive(activePanel.Equals(RoomListPanel.name));    // UI should call OnRoomListButtonClicked() to activate this
             InsideRoomPanel.SetActive(activePanel.Equals(InsideRoomPanel.name));
         }
-        
+
         private void UpdateCachedRoomList(List<RoomInfo> roomList)
         {
             foreach (RoomInfo info in roomList)
@@ -371,7 +363,7 @@ namespace Photon.Pun.Demo.Asteroids
                 GameObject entry = Instantiate(RoomListEntryPrefab);
                 entry.transform.SetParent(RoomListContent.transform);
                 entry.transform.localScale = Vector3.one;
-                entry.GetComponent<RoomListEntry>().Initialize(info.Name, (byte)info.PlayerCount, (byte)info.MaxPlayers);
+                entry.GetComponent<RoomListEntry>().Initialize(info.Name, (byte)info.PlayerCount, info.MaxPlayers);
 
                 roomListEntries.Add(info.Name, entry);
             }
