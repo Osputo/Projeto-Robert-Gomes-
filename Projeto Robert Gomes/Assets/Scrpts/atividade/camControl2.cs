@@ -1,72 +1,120 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
+using System;
+using static System.Net.Mime.MediaTypeNames;
 
 public class camControl2 : MonoBehaviour
 {
     public Transform charBody, charHead;
-    float maxY=90, minY=-45;
+    float maxY = 90, minY = -45;
     float rotationX = 0, rotationY = 0;
-    public float senseX=1.2f, senseY=1.2f;
-    float smoothRotX = 0, smoothRotY=0;
-    float smoothCoefX = 1.5f, smoothCoefY=1.5f;
+    public float senseX = 1.2f, senseY = 1.2f;
+    float smoothRotX = 0, smoothRotY = 0;
+    float smoothCoefX = 1.5f, smoothCoefY = 1.5f;
     float range = 1.7f;
+    public GameObject inte;
 
+    BookController book;
 
-    public Image canvaCursor;
-    // Start is called before the first frame update
+    player player;
+
+    PhotonView phview;
     void Start()
     {
-        if(!charBody.GetComponent<PhotonView>().IsMine)
-            Destroy(this.gameObject);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        phview = GetComponent<PhotonView>();
+
+
+
+        player = FindObjectOfType(typeof(player)) as player;
     }
     private void LateUpdate()
     {
-        transform.position = charHead.position;
+
+        if (!phview.IsMine)
+            gameObject.SetActive(false);
+
+        switch (player.state)
+        {
+            case camState.normal:
+                transform.position = charHead.position;
+
+                break;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!charBody.GetComponent<PhotonView>().IsMine)
-            return;
-        FpsCamera();
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, range))
+        switch (player.state)
         {
-            if (!hit.collider)
-                canvaCursor.color = Color.gray;
-            else if (hit.collider.CompareTag("Interact"))
-            {
-                print(hit.collider.name);
-                canvaCursor.color = Color.red;
-                if (Input.GetButtonDown("Fire1"))
+            case camState.normal:
+
+                FpsCamera();
+
+                RaycastHit hit2;
+                if (Physics.Raycast(transform.position, transform.forward, out hit2, range))
                 {
-                    hit.collider.SendMessage("Interaction", SendMessageOptions.DontRequireReceiver);
+                    if (hit2.collider.CompareTag("Interact"))
+                    {
+                        inte.SetActive(true);
+                    }
+
+
+                    if (Input.GetButtonDown("Fire1"))
+                    {
+                        phview.RPC("RayCastAct", RpcTarget.All);
+                    }
                 }
-            }
-            else if(hit.collider.CompareTag("Block"))
-            {
-                print(hit.collider.name);
-                canvaCursor.color = Color.red;
-                if (Input.GetButtonDown("Fire1"))
-                    charBody.GetComponent<PhotonView>().RPC("RPCTradeMaterial", RpcTarget.AllBuffered, hit.collider.GetComponent<ColorBrick>().material.name);
-            }
-            else
-            {
-                print(hit.collider.name);
-                canvaCursor.color = Color.gray;
-            }
+                else
+                {
+                    inte.SetActive(false);
+                }
+                break;
+
+            case camState.dialogue:
+
+                inte.SetActive(false);
+
+
+
+                break;
 
         }
-        Debug.DrawRay(transform.position, transform.forward*range, Color.red);
-        
+
+
     }
+    [PunRPC]
+    void RayCastAct()
+    {
+        switch (player.state)
+        {
+            case camState.normal:
+
+                RaycastHit hit;
+
+                if (Physics.Raycast(transform.position, transform.forward, out hit, range))
+                {
+                    if (hit.collider.CompareTag("Interact"))
+                    {
+                        hit.collider.SendMessage("Interaction2", SendMessageOptions.DontRequireReceiver);
+                        book.book[hit.collider.gameObject.GetComponent<key>().id] = true;
+                    }
+
+                }
+                Debug.DrawRay(transform.position, transform.forward * range, Color.red);
+
+                break;
+        }
+    }
+
+
     void FpsCamera()
     {
         float verticalDelta = Input.GetAxisRaw("Mouse Y") * senseY;
@@ -81,5 +129,5 @@ public class camControl2 : MonoBehaviour
         charBody.localEulerAngles = new Vector3(0, rotationX, 0);
         transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
     }
-    
+
 }

@@ -17,6 +17,8 @@ public class camControl : MonoBehaviour
     float range = 1.7f;
     public GameObject inte;
 
+    BookController book;
+
     player player;
 
     PhotonView phview;
@@ -54,6 +56,10 @@ public class camControl : MonoBehaviour
         {
             case camState.normal:
 
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+
+
                 FpsCamera();
 
                 RaycastHit hit2;
@@ -80,8 +86,8 @@ public class camControl : MonoBehaviour
 
                 inte.SetActive(false);
 
-
-
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
                 break;
 
         }
@@ -102,6 +108,7 @@ public class camControl : MonoBehaviour
                         if (hit.collider.CompareTag("Interact"))
                         {
                             hit.collider.SendMessage("Interaction", SendMessageOptions.DontRequireReceiver);
+                            book.book[hit.collider.gameObject.GetComponent<key>().id] = true;
                         }
 
                 }
