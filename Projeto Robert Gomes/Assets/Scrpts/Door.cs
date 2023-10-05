@@ -42,11 +42,6 @@ public class Door : MonoBehaviour
     [PunRPC]
     public void DoorRPC()
     {
-        if(player2.chave == true)
             anim.SetBool("open", !anim.GetBool("open"));
-        else
-        {
-            anim.SetTrigger("loked");
-        }
     }
 }

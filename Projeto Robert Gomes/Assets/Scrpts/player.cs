@@ -7,7 +7,9 @@ using Photon.Realtime;
 public enum camState
 {
     normal,
-    dialogue
+    dialogue,
+    book,
+    pause
 }
 public class player : MonoBehaviour
 {
@@ -18,6 +20,7 @@ public class player : MonoBehaviour
     public float maxJumpHeight = 2, timeToMaxHeight = 0.5f;
 
     public GameObject book;
+    public GameObject pause;
 
 
 
@@ -70,19 +73,47 @@ public class player : MonoBehaviour
                     if (Input.GetButtonDown("Book"))
                     {
                         book.SetActive(true);
-                        state = camState.dialogue;
+                        state = camState.book;
+                    }
+
+                    if (Input.GetButtonDown("Pause"))
+                    {
+                        pause.SetActive(true);
+                        state = camState.pause;
                     }
 
                     break;
 
-                case camState.dialogue:
+                case camState.book:
 
                     if (Input.GetButtonDown("Book"))
                     {
-
                         book.SetActive(false);
                         state = camState.normal;
                     }
+                    if (Input.GetButtonDown("Pause"))
+                    {
+                        book.SetActive(false);
+                        pause.SetActive(true);
+                        state = camState.pause;
+                    }
+                    break;
+
+
+                case camState.pause:
+
+                    if (Input.GetButtonDown("Pause"))
+                    {
+                        pause.SetActive(false);
+                        state = camState.normal;
+                    }
+                    if (Input.GetButtonDown("Book"))
+                    {
+                        pause.SetActive(false);
+                        book.SetActive(true);
+                        state = camState.book;
+                    }
+
                     break;
             }
         }

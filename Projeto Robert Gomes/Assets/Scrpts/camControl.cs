@@ -90,6 +90,22 @@ public class camControl : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Confined;
                 break;
 
+            case camState.book:
+
+                inte.SetActive(false);
+
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
+                break;
+
+            case camState.pause:
+
+                inte.SetActive(false);
+
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
+                break;
+
         }
         
         
@@ -108,7 +124,7 @@ public class camControl : MonoBehaviour
                         if (hit.collider.CompareTag("Interact"))
                         {
                             hit.collider.SendMessage("Interaction", SendMessageOptions.DontRequireReceiver);
-                            book.book[hit.collider.gameObject.GetComponent<key>().id] = true;
+                            //book.book[hit.collider.gameObject.GetComponent<key>().id] = true;
                         }
 
                 }

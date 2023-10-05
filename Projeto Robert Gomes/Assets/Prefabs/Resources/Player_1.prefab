@@ -35,7 +35,7 @@ RectTransform:
   - {fileID: 1793324317}
   - {fileID: 6959868574606339472}
   m_Father: {fileID: 7432384272433747546}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -685,7 +685,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7432384272433747546}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -896,6 +896,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4527455882270246749, guid: e3165b0dcf0a07b4282a62da051bb448, type: 3}
   m_PrefabInstance: {fileID: 2870151481280593501}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1901474261742382805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4447224730704515208, guid: e3165b0dcf0a07b4282a62da051bb448, type: 3}
+  m_PrefabInstance: {fileID: 2870151481280593501}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7432384272433747546 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4679787083455752199, guid: e3165b0dcf0a07b4282a62da051bb448, type: 3}
@@ -1068,4 +1073,5 @@ MonoBehaviour:
   maxJumpHeight: 0.5
   timeToMaxHeight: 0.5
   book: {fileID: 1801460414911019264}
+  pause: {fileID: 1901474261742382805}
   state: 0
