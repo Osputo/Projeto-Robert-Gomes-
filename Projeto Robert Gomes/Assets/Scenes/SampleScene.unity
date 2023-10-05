@@ -286,7 +286,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 963194227}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -369,7 +369,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 23.9
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -477,6 +477,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 493660275}
     m_Modifications:
+    - target: {fileID: 1325179254318316276, guid: 7e853dbedf299624a873d5655940ff5b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325179254318316276, guid: 7e853dbedf299624a873d5655940ff5b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325179254318316276, guid: 7e853dbedf299624a873d5655940ff5b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325179254318316276, guid: 7e853dbedf299624a873d5655940ff5b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325179254318316276, guid: 7e853dbedf299624a873d5655940ff5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4088006662182307174, guid: 7e853dbedf299624a873d5655940ff5b, type: 3}
       propertyPath: m_Name
       value: Book
