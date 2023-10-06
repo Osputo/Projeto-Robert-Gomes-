@@ -124,7 +124,9 @@ public class camControl : MonoBehaviour
                         if (hit.collider.CompareTag("Interact"))
                         {
                             hit.collider.SendMessage("Interaction", SendMessageOptions.DontRequireReceiver);
-                            //book.book[hit.collider.gameObject.GetComponent<key>().id] = true;
+                            book.book[hit.collider.gameObject.GetComponent<key>().id] = true;
+
+                        hit.collider.gameObject.GetComponent<key>().Interaction();
                         }
 
                 }

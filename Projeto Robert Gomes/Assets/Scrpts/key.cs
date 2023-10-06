@@ -9,21 +9,23 @@ public class key : MonoBehaviour
     player player;
     PhotonView phview;
     public int id;
+    public bool activado;
 
-    // Start is called before the first frame update
-
-    private void LateUpdate()
-    {
-        player = FindObjectOfType(typeof(player)) as player;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void Interaction()
     {
-        
+        phview.RPC("DestroyRPC", RpcTarget.AllBuffered);
+    }
+
+    [PunRPC]
+    private void DestroyRPC()
+    {
+
+
+        if (id == 1 || id == 2 || id == 3 || id == 4 || id == 6)
+        {
+
+        }
+        else
+            gameObject.SetActive(false);
     }
 }
