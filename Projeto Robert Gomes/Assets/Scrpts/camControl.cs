@@ -17,7 +17,7 @@ public class camControl : MonoBehaviour
     float range = 1.7f;
     public GameObject inte;
 
-    BookController book;
+    public BookController book;
 
     player player;
 
@@ -123,10 +123,10 @@ public class camControl : MonoBehaviour
                 {
                         if (hit.collider.CompareTag("Interact"))
                         {
-                            hit.collider.SendMessage("Interaction", SendMessageOptions.DontRequireReceiver);
                             book.book[hit.collider.gameObject.GetComponent<key>().id] = true;
+                            hit.collider.SendMessage("Interaction", SendMessageOptions.DontRequireReceiver);
 
-                        hit.collider.gameObject.GetComponent<key>().Interaction();
+                            //hit.collider.gameObject.GetComponent<key>().Interaction();
                         }
 
                 }

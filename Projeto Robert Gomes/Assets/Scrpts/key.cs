@@ -19,9 +19,9 @@ public class key : MonoBehaviour
     [PunRPC]
     private void DestroyRPC()
     {
+        
 
-
-        if (id == 1 || id == 2 || id == 3 || id == 4 || id == 6)
+        if (id == 1 || id == 2 || id == 3 || id == 4)
         {
 
         }
