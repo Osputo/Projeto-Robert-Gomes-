@@ -109,6 +109,7 @@ public class bookControler : MonoBehaviour
             if (!other.gameObject.GetComponent<key>().activado)
             {
                 activateContent[other.gameObject.GetComponent<key>().id] = true;
+                other.gameObject.GetComponent<key>().Destroy();
                 notificationOn = true;
 
                 notificationSound.Play();

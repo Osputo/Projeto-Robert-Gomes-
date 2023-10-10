@@ -11,24 +11,21 @@ public class key : MonoBehaviour
     public int id;
     public bool activado;
 
-    public void OnCollisionEnter(Collision collision)
+
+    private void Start()
+    {
+        phview = GetComponent<PhotonView>(); ;    
+    }
+
+    public void Destroy()
     {
         phview.RPC("DestroyRPC", RpcTarget.AllBuffered);
     }
 
-    
-    
 
     [PunRPC]
     private void DestroyRPC()
     {
-        
-
-        if (id == 1 || id == 2 || id == 3 || id == 4)
-        {
-
-        }
-        else
-            gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }
