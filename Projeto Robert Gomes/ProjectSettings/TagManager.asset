@@ -9,6 +9,7 @@ TagManager:
   - sittingpoint
   - stealingpoint
   - pickuppoint
+  - NoteTrigger
   layers:
   - Default
   - TransparentFX

@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking.Types;
+using UnityEngine.Playables;
 
 public class bookControler : MonoBehaviour
 {
+
+    public AudioSource notificationSound;
+
     public GameObject[] content;
     [SerializeField] bool[] activateContent;
-   
+
+    public GameObject notification;
+    public bool notificationOn;
     // Start is called before the first frame update
     void Start()
     {
@@ -93,5 +100,20 @@ public class bookControler : MonoBehaviour
 
         if (activateContent[22])
             content[24].SetActive(true); //Depois de abrir o auditório
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("NoteTrigger"))
+        {
+            if (!other.gameObject.GetComponent<key>().activado)
+            {
+                activateContent[other.gameObject.GetComponent<key>().id] = true;
+                notificationOn = true;
+
+                notificationSound.Play();
+                other.gameObject.GetComponent<key>().activado = true;
+            }
+        }
     }
 }

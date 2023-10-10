@@ -8,7 +8,7 @@ public enum camState
 {
     normal,
     dialogue,
-    book,
+    book1,
     pause
 }
 public class player : MonoBehaviour
@@ -73,7 +73,7 @@ public class player : MonoBehaviour
                     if (Input.GetButtonDown("Book"))
                     {
                         book.SetActive(true);
-                        state = camState.book;
+                        state = camState.book1;
                     }
 
                     if (Input.GetButtonDown("Pause"))
@@ -84,7 +84,7 @@ public class player : MonoBehaviour
 
                     break;
 
-                case camState.book:
+                case camState.book1:
 
                     if (Input.GetButtonDown("Book"))
                     {
@@ -111,7 +111,7 @@ public class player : MonoBehaviour
                     {
                         pause.SetActive(false);
                         book.SetActive(true);
-                        state = camState.book;
+                        state = camState.book1;
                     }
 
                     break;

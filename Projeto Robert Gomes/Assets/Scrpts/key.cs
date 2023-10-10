@@ -11,10 +11,13 @@ public class key : MonoBehaviour
     public int id;
     public bool activado;
 
-    public void Interaction()
+    public void OnCollisionEnter(Collision collision)
     {
         phview.RPC("DestroyRPC", RpcTarget.AllBuffered);
     }
+
+    
+    
 
     [PunRPC]
     private void DestroyRPC()

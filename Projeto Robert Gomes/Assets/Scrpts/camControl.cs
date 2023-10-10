@@ -17,7 +17,7 @@ public class camControl : MonoBehaviour
     float range = 1.7f;
     public GameObject inte;
 
-    public BookController book;
+    bookControler book;
 
     player player;
 
@@ -90,7 +90,7 @@ public class camControl : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Confined;
                 break;
 
-            case camState.book:
+            case camState.book1:
 
                 inte.SetActive(false);
 
@@ -122,11 +122,8 @@ public class camControl : MonoBehaviour
                 if (Physics.Raycast(transform.position, transform.forward, out hit, range))
                 {
                         if (hit.collider.CompareTag("Interact"))
-                        {
-                            book.book[hit.collider.gameObject.GetComponent<key>().id] = true;
-                            hit.collider.SendMessage("Interaction", SendMessageOptions.DontRequireReceiver);
-
-                            //hit.collider.gameObject.GetComponent<key>().Interaction();
+                        {  
+                            hit.collider.SendMessage("Interaction", SendMessageOptions.DontRequireReceiver); 
                         }
 
                 }
