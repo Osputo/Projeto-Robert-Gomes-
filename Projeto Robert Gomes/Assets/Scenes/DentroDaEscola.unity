@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.33830786, g: 0.47490177, b: 0.73416024, a: 1}
+  m_IndirectSpecularColor: {r: 0.33832145, g: 0.47491422, b: 0.7341739, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3069,6 +3069,7 @@ MonoBehaviour:
 
 '
     - "Os outros eu n\xE3o fa\xE7o ideia.\n"
+  inkJSON: {fileID: 0}
 --- !u!136 &65934108
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8324,6 +8325,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences: []
+  inkJSON: {fileID: 0}
 --- !u!1001 &207762120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10741,6 +10743,7 @@ MonoBehaviour:
 
 '
     - "Os outros eu n\xE3o fa\xE7o ideia.\n"
+  inkJSON: {fileID: 0}
 --- !u!136 &269157828
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13471,6 +13474,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC Secretaria
       objectReference: {fileID: 0}
+    - target: {fileID: 100104, guid: d83e07c47cb17454bbddbc5dd7574150, type: 3}
+      propertyPath: m_TagString
+      value: Interact
+      objectReference: {fileID: 0}
     - target: {fileID: 100106, guid: d83e07c47cb17454bbddbc5dd7574150, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -13678,6 +13685,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences: []
+  inkJSON: {fileID: 4900000, guid: 1adb1045a939afd40a48b47f635a0dbd, type: 3}
 --- !u!136 &343283743
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18628,7 +18636,7 @@ GameObject:
   - component: {fileID: 469245195}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: NoteTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25011,6 +25019,7 @@ MonoBehaviour:
     - "S\xF3 tem gente burra nessa sala."
     - Certeza que alguem ta falando uma meia verdade.
     - Odeio gente burra
+  inkJSON: {fileID: 0}
 --- !u!1001 &612700511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25912,6 +25921,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences: []
+  inkJSON: {fileID: 0}
 --- !u!4 &633437696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400104, guid: d83e07c47cb17454bbddbc5dd7574150, type: 3}
@@ -26199,6 +26209,7 @@ MonoBehaviour:
       pro recreio.'
     - O professor falou que alguem tinha pegado a chave
     - Tenho certerza que foi o garoto de camisa verde
+  inkJSON: {fileID: 0}
 --- !u!1 &637400899
 GameObject:
   m_ObjectHideFlags: 0
@@ -27905,6 +27916,7 @@ MonoBehaviour:
     name: 
     sentences:
     - "Eu estou a procura do meu ESFREG\xC3O, BALDE, SAB\xC3O E LUVA.\r\n"
+  inkJSON: {fileID: 0}
 --- !u!1001 &663301211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31001,6 +31013,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences: []
+  inkJSON: {fileID: 0}
 --- !u!1 &765234787 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8117445569965054034, guid: 4714259b34f466848ac3e93372354cd6, type: 3}
@@ -44206,6 +44219,7 @@ MonoBehaviour:
 
 '
     - "Os outros eu n\xE3o fa\xE7o ideia.\n"
+  inkJSON: {fileID: 0}
 --- !u!136 &1115954666
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -48797,6 +48811,7 @@ MonoBehaviour:
     - "O caba l\xE1, o vermelho ta certo"
     - E o verde tambem
     - Eu acho.
+  inkJSON: {fileID: 0}
 --- !u!1001 &1219763417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57075,6 +57090,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences: []
+  inkJSON: {fileID: 0}
 --- !u!95 &1399538067 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2952597783961106557, guid: d6112008cba14c147b799fa5f0944f3d, type: 3}
@@ -63054,6 +63070,7 @@ MonoBehaviour:
 
 '
     - "Os outros eu n\xE3o fa\xE7o ideia.\n"
+  inkJSON: {fileID: 0}
 --- !u!136 &1548168398
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -67916,6 +67933,7 @@ MonoBehaviour:
     name: Hudson
     sentences:
     - Hudson
+  inkJSON: {fileID: 0}
 --- !u!1001 &1682833977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68726,6 +68744,7 @@ MonoBehaviour:
     sentences:
     - "Mano, acredita em mim, eu n\xE3o to com a chave"
     - "S\xF3 acredita e mim."
+  inkJSON: {fileID: 0}
 --- !u!1001 &1708769933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74103,6 +74122,7 @@ MonoBehaviour:
     name: Pallaoro
     sentences:
     - So sei que UM aluno esta MENTINDO, e UM esta falando a VERDADE
+  inkJSON: {fileID: 0}
 --- !u!4 &1833006740 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400104, guid: d83e07c47cb17454bbddbc5dd7574150, type: 3}
@@ -75406,6 +75426,7 @@ MonoBehaviour:
     name: Rodrigo
     sentences:
     - 
+  inkJSON: {fileID: 0}
 --- !u!136 &1866272311
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -80074,6 +80095,7 @@ MonoBehaviour:
 
 '
     - "Os outros eu n\xE3o fa\xE7o ideia.\n"
+  inkJSON: {fileID: 0}
 --- !u!136 &1997254508
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -80359,6 +80381,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences: []
+  inkJSON: {fileID: 0}
 --- !u!114 &1997596487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82451,7 +82474,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043845007}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 131.33711, y: 29.791872, z: 25.623152}
@@ -83710,6 +83733,7 @@ MonoBehaviour:
     sentences:
     - Quase certeza de quem ta mentindo ta com a chave.
     - "Essa e minha contribui\xE7\xE3o."
+  inkJSON: {fileID: 0}
 --- !u!1001 &2082959664
 PrefabInstance:
   m_ObjectHideFlags: 0

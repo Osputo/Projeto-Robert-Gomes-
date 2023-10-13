@@ -3,13 +3,103 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Ink.Runtime;
+
 public class DialogueManeger : MonoBehaviour
 {
-    public TMP_Text nameText;
+    private static DialogueManeger instance;
+
+    [Header("Dialogue UI")]
+    [SerializeField] private GameObject DialogUePanel;
+    [SerializeField] private TextMeshProUGUI dialogueText;
+
+    private Story currentStory;
+
+    public Animator animator;
+
+    private bool dialogueIsPlaying;
+
+    player player;
+    private void Awake()
+    {
+        if(instance != null)
+        {
+            Debug.LogWarning("Found more than one Dialogue Maneger in the scene");
+            dialogueIsPlaying = false;
+
+        }
+        instance = this;
+    }
+
+    private void LateUpdate()
+    {
+        player = FindObjectOfType(typeof(player)) as player;
+    }
+
+    public static DialogueManeger GetInstance()
+    {
+        return instance;
+    }
+
+
+
+    private void Update()
+    {
+        if(!dialogueIsPlaying)
+        {
+            return;
+        }
+
+        if (Input.GetButtonDown("Q"))
+        {
+            ContinueStory();
+        }
+    }
+
+    public void EnterDialogueMode(TextAsset inkJSON)
+    {
+        currentStory = new Story(inkJSON.text);
+
+        player.state = camState.dialogue;
+        dialogueIsPlaying = true;
+
+
+        animator.SetBool("IsOpen", true);
+
+
+
+    }
+
+
+    private void ExitDialogueMode()
+    {
+        player.state = camState.normal;
+        dialogueIsPlaying = false;
+
+        animator.SetBool("IsOpen", false);
+
+        dialogueText.text = "";
+    }
+
+
+    private void ContinueStory()
+    {
+
+        if (currentStory.canContinue)
+        {
+            dialogueText.text = currentStory.Continue();
+        }
+        else
+        {
+            ExitDialogueMode();
+        }
+    }
+
+    /*public TMP_Text nameText;
     public TMP_Text dialogueText;
     public float speedText;
 
-    public Animator animator;
+    
 
     player player;
 
@@ -89,5 +179,14 @@ public class DialogueManeger : MonoBehaviour
 
 
         player.state = camState.normal;
-    }
+    }*/
+
+
+
+
+
+
+
+
+
 }
