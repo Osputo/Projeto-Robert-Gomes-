@@ -10,8 +10,13 @@ public class DialogueManeger : MonoBehaviour
     private static DialogueManeger instance;
 
     [Header("Dialogue UI")]
-    [SerializeField] private GameObject DialogUePanel;
+    [SerializeField] private GameObject DialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
+
+    [Header("Choices")]
+
+    [SerializeField] private GameObject[] choices;
+    private TextMeshProUGUI[] choicesText;
 
     private Story currentStory;
 
@@ -66,7 +71,7 @@ public class DialogueManeger : MonoBehaviour
 
         animator.SetBool("IsOpen", true);
 
-
+        ContinueStory();
 
     }
 
