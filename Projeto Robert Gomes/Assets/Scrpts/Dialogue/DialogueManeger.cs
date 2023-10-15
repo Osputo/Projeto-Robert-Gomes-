@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Ink.Runtime;
+using UnityEngine.EventSystems;
 
 public class DialogueManeger : MonoBehaviour
 {
@@ -39,6 +40,15 @@ public class DialogueManeger : MonoBehaviour
     private void LateUpdate()
     {
         player = FindObjectOfType(typeof(player)) as player;
+
+        choicesText = new TextMeshProUGUI[choices.Length];
+        int index = 0;
+
+        foreach (GameObject choice in choices)
+        {
+            choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
+            index++;
+        }
     }
 
     public static DialogueManeger GetInstance()
@@ -93,12 +103,40 @@ public class DialogueManeger : MonoBehaviour
         if (currentStory.canContinue)
         {
             dialogueText.text = currentStory.Continue();
+
+            DisplayChoices();
+
         }
         else
         {
             ExitDialogueMode();
         }
     }
+
+    private void DisplayChoices()
+    {
+        List<Choice> currentChoices = currentStory.currentChoices;
+
+        if(currentChoices.Count > choices.Length) 
+        {
+            Debug.LogError("More choices were given then the UI can support. Number of choices given: " + currentChoices.Count);
+        }
+
+        int index = 0;
+        foreach (Choice choice in currentChoices)
+        {
+            choices[index].gameObject.SetActive(true);
+            choicesText[index].text = choice.text;
+            index++;
+        }
+
+        for (int i = index; i < choices.Length; i++)
+        {
+            choices[i].gameObject.SetActive(false);
+
+        }
+    }
+
 
     /*public TMP_Text nameText;
     public TMP_Text dialogueText;
