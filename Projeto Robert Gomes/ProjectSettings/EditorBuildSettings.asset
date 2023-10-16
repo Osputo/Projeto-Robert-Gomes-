@@ -9,12 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 09cabc27806097a429b66a29e902c05a
   - enabled: 1
-    path: Assets/Scenes/n_utilizado.unity
-    guid: 4ed6d219d1812014d80dc432fde14a46
-  - enabled: 1
     path: Assets/Scenes/DentroDaEscola.unity
     guid: 9a3aef8df150bf2449ac5c102b08eba4
-  - enabled: 1
-    path: Assets/Scenes/CenaPausar.unity
-    guid: 741e2e944c168d64eae8b184155dea32
   m_configObjects: {}
