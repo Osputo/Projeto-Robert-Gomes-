@@ -47,7 +47,7 @@ public class bookControler : MonoBehaviour
             content[6].SetActive(true); //Depois de conversar com a faxineira
             content[7].SetActive(true);
         }
-            
+             
         if (activateContent[7])
             content[8].SetActive(true); //Balde
 

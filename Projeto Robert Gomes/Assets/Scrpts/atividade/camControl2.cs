@@ -86,6 +86,14 @@ public class camControl2 : MonoBehaviour
 
                 break;
 
+            case camState.pause:
+
+                inte.SetActive(false);
+
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
+                break;
+
         }
 
 

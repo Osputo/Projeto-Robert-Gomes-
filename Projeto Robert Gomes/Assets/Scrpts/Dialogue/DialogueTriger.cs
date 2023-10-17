@@ -10,6 +10,7 @@ public class DialogueTriger : MonoBehaviour
 
     [Header("ink JSON")]
     [SerializeField] private TextAsset inkJSON;
+    [SerializeField] private TextAsset inkJSON2;
 
     public void Interaction()
     {
@@ -21,6 +22,7 @@ public class DialogueTriger : MonoBehaviour
 
     public void Interaction2()
     {
+        DialogueManeger.GetInstance().EnterDialogueMode(inkJSON2);
         //FindObjectOfType<DialogueManeger>().StartDialogue(dialogue);
     }
 
