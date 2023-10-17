@@ -84,6 +84,12 @@ namespace Photon.Pun.Demo.Asteroids
             ClearRoomListView();
         }
 
+        public void DiconnectButton()
+        {
+            PhotonNetwork.Disconnect();
+            this.SetActivePanel(LoginPanel.name);
+        }
+
         public override void OnCreateRoomFailed(short returnCode, string message)
         {
             SetActivePanel(SelectionPanel.name);
@@ -368,5 +374,9 @@ namespace Photon.Pun.Demo.Asteroids
                 roomListEntries.Add(info.Name, entry);
             }
         }
+
+
+
+
     }
 }
