@@ -1260,6 +1260,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1  Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4086155429122896792, guid: 95e99195a063c874890ea335f1bc580f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00049
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086155429122896792, guid: 95e99195a063c874890ea335f1bc580f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086155429122896792, guid: 95e99195a063c874890ea335f1bc580f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01616
+      objectReference: {fileID: 0}
     - target: {fileID: 4086155429122896800, guid: 95e99195a063c874890ea335f1bc580f, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1441,11 +1453,11 @@ PrefabInstance:
       objectReference: {fileID: 4792981805844626741}
     - target: {fileID: 9187362881093851278, guid: af8b245e180acc847977b5d32d998af5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9187362881417021850, guid: af8b245e180acc847977b5d32d998af5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9187362881417021850, guid: af8b245e180acc847977b5d32d998af5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
