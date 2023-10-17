@@ -48,7 +48,6 @@ public class bookControler : MonoBehaviour
             content[7].SetActive(true);
         }
             
-
         if (activateContent[7])
             content[8].SetActive(true); //Balde
 
@@ -67,39 +66,69 @@ public class bookControler : MonoBehaviour
             content[13].SetActive(true);
         }
             
-
         if (activateContent[12])
-            content[14].SetActive(true); content[13].SetActive(true);//ped1
-
+        {
+            content[14].SetActive(true); 
+            content[13].SetActive(true);//ped1
+        }
+            
         if (activateContent[13])
-            content[15].SetActive(true); content[13].SetActive(true);//ped2
-
+        {
+            content[15].SetActive(true); 
+            content[13].SetActive(true);//ped2
+        }
+        
         if (activateContent[14])
-            content[16].SetActive(true); content[13].SetActive(true);//ped3
-
+        {
+            content[16].SetActive(true); 
+            content[13].SetActive(true);//ped3
+        }
+            
         if (activateContent[15])
-            content[17].SetActive(true); content[13].SetActive(true);//ped4
-
+        {
+            content[17].SetActive(true); 
+            content[13].SetActive(true);//ped4
+        }
+            
         if (activateContent[16])
-            content[18].SetActive(true); content[13].SetActive(true);//ped5
-
+        {
+            content[18].SetActive(true); 
+            content[13].SetActive(true);//ped5
+        }
+           
         if (activateContent[17])
-            content[19].SetActive(true); content[13].SetActive(true);//ped6
-
+        {
+            content[19].SetActive(true); 
+            content[13].SetActive(true);//ped6
+        }
+            
         if (activateContent[18])
-            content[20].SetActive(true); content[13].SetActive(true);//ped7
-
+        {
+            content[20].SetActive(true); 
+            content[13].SetActive(true);//ped7
+        }
+            
         if (activateContent[19])
-            content[21].SetActive(true); content[13].SetActive(true); //ped8
+        {
+            content[21].SetActive(true); 
+            content[13].SetActive(true); //ped8
+        }
 
         if (activateContent[20])
+        {
             content[22].SetActive(true); //parte de cima mapa
-
+        }
+            
         if (activateContent[21])
+        {
             content[23].SetActive(true); //Depois de resolver o puzzle 3
+        }        
 
         if (activateContent[22])
+        {
             content[24].SetActive(true); //Depois de abrir o auditório
+        }
+            
     }
 
     private void OnTriggerEnter(Collider other)
