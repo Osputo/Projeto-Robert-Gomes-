@@ -1,1 +1,1 @@
-﻿{"inkVersion":21,"root":[["^Você e o detetive né?","\n","^Pode me ajudar achando quem pegou a chave da 108?","\n","^Ela esta com um dos alunos que estão na biblioteca.","\n",["done",{"#f":5,"#n":"g-0"}],null],"done",{"#f":1}],"listDefs":{}}
+﻿{"inkVersion":21,"root":[["ev","str","^pinto","/str",{"x()":"mudarDialogo","exArgs":1},"pop","/ev","\n","^Você e o detetive né?","\n","^Pode me ajudar achando quem pegou a chave da 108?","\n","^Ela esta com um dos alunos que estão na biblioteca.","\n",["done",{"#f":5,"#n":"g-0"}],null],"done",{"#f":1}],"listDefs":{}}

@@ -1,6 +1,7 @@
 
 EXTERNAL mudarDialogo(diferent)
 
+~ mudarDialogo("pinto")
 
 Você e o detetive né?
 

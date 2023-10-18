@@ -80,6 +80,10 @@ public class DialogueManeger : MonoBehaviour
 
         animator.SetBool("IsOpen", true);
 
+        currentStory.BindExternalFunction("mudarDialogo", (string diferent) => {
+            Debug.Log(diferent);
+        });
+
         ContinueStory();
 
     }
@@ -94,10 +98,8 @@ public class DialogueManeger : MonoBehaviour
 
         dialogueText.text = "";
 
-        currentStory.BindExternalFunction("mudarDialogo", (string diferent) => {
-            Debug.Log(diferent);
-        });
 
+        currentStory.UnbindExternalFunction("mudarDialogo");
         
     }
 
