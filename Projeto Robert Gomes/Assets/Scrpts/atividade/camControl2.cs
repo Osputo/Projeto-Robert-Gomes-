@@ -56,6 +56,8 @@ public class camControl2 : MonoBehaviour
         {
             case camState.normal:
 
+                Cursor.lockState = CursorLockMode.Locked;
+
                 FpsCamera();
 
                 RaycastHit hit2;

@@ -1,3 +1,3 @@
-
-
-Eu não estou com a chave. 
+Eae mano!
+Sabe a chave?
+Eu não estou com ela. 
