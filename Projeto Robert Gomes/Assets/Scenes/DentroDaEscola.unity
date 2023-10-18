@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.33832133, g: 0.47491416, b: 0.7341734, a: 1}
+  m_IndirectSpecularColor: {r: 0.33830786, g: 0.47490177, b: 0.73416024, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4455,7 +4455,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kitGameplay1: {fileID: 5783981757230227156, guid: ebfb6ea664d3649498d1fabc69f5f478, type: 3}
   kitGameplay2: {fileID: 7000101002174798024, guid: 7bf7389b98f3f0f4cb53e055cd5bb531, type: 3}
-  playerSpawner: {fileID: 104987438}
+  playerSpawner1: {fileID: 104987438}
+  playerSpawner2: {fileID: 1765735215}
 --- !u!4 &104987438
 Transform:
   m_ObjectHideFlags: 0
@@ -4467,7 +4468,8 @@ Transform:
   m_LocalPosition: {x: 18.829, y: 1.02, z: -3.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1765735215}
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -74407,6 +74409,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.593061, y: 0.88334143, z: 0.4573538}
   m_Center: {x: -0.075189345, y: 0.44190735, z: 0.00000005960464}
+--- !u!1 &1765735214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1765735215}
+  m_Layer: 0
+  m_Name: Player2Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1765735215
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765735214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.375, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 104987438}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1766106427
 PrefabInstance:
   m_ObjectHideFlags: 0

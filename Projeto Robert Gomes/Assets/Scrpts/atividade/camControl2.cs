@@ -56,6 +56,7 @@ public class camControl2 : MonoBehaviour
         {
             case camState.normal:
 
+                Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
 
                 FpsCamera();
@@ -84,7 +85,8 @@ public class camControl2 : MonoBehaviour
 
                 inte.SetActive(false);
 
-
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
 
                 break;
 

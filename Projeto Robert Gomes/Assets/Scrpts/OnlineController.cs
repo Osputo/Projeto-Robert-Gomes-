@@ -1,25 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;
 using Photon.Realtime;
+using Photon.Pun;
 
-
-public class OnlineController : MonoBehaviour
+public class OnlineController : MonoBehaviourPunCallbacks
 {
     [Header("Online")]
     public GameObject kitGameplay1;
     public GameObject kitGameplay2;
 
-    public Transform playerSpawner;
-
-    NetworkController online;
+    public Transform playerSpawner1;
+    public Transform playerSpawner2;
 
     void Start()
     {
-        if (PhotonNetwork.PlayerList.Length == 1)
-            PhotonNetwork.Instantiate(kitGameplay1.name, playerSpawner.position, kitGameplay1.transform.rotation, 0);
+        if (PhotonNetwork.IsMasterClient)
+            PhotonNetwork.Instantiate(kitGameplay1.name, playerSpawner1.position, playerSpawner1.transform.rotation, 0);
         else
-            PhotonNetwork.Instantiate(kitGameplay2.name, playerSpawner.position, kitGameplay2.transform.rotation, 0);
+            PhotonNetwork.Instantiate(kitGameplay2.name, playerSpawner2.position, playerSpawner2.transform.rotation, 0);
     }
 }
