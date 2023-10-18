@@ -37,6 +37,7 @@ public class Door : MonoBehaviour
     public void Interaction2()
     {
         phview.RPC("DoorRPC", RpcTarget.AllBuffered);
+        GetComponent<PhotonView>().RPC("RPCInteract", RpcTarget.AllBuffered);
 
     }
     [PunRPC]

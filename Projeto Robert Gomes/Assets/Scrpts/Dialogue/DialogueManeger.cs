@@ -15,7 +15,6 @@ public class DialogueManeger : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
 
     [Header("Choices")]
-
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
 

@@ -22,6 +22,8 @@ public class DialogueTriger : MonoBehaviour
 
     public void Interaction2()
     {
+
+        Debug.Log("TA CHEGANDO");
         DialogueManeger.GetInstance().EnterDialogueMode(inkJSON2);
         //FindObjectOfType<DialogueManeger>().StartDialogue(dialogue);
     }
