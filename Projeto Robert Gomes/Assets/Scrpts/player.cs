@@ -109,6 +109,10 @@ public class player : MonoBehaviour
                     }
 
                     break;
+
+                case camState.dialogue:
+
+                    break;
             }
         }
     }

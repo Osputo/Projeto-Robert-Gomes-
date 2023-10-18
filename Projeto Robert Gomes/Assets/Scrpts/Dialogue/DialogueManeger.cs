@@ -93,6 +93,12 @@ public class DialogueManeger : MonoBehaviour
         animator.SetBool("IsOpen", false);
 
         dialogueText.text = "";
+
+        currentStory.BindExternalFunction("mudarDialogo", (string diferent) => {
+            Debug.Log(diferent);
+        });
+
+        
     }
 
 
