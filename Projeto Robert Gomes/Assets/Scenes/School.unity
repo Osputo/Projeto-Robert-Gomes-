@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.48396307, g: 0.5757423, b: 0.6802008, a: 1}
+  m_IndirectSpecularColor: {r: 0.48395744, g: 0.57573867, b: 0.68019843, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13803,6 +13803,8 @@ PlayableDirector:
     value: {fileID: 739806559}
   - key: {fileID: 2341848923000344508, guid: 7b58cffb46a2fbc44991cce3cf0dcc39, type: 2}
     value: {fileID: 739806563}
+  - key: {fileID: 6811239577768391329, guid: 7b58cffb46a2fbc44991cce3cf0dcc39, type: 2}
+    value: {fileID: 2054578957}
   m_ExposedReferences:
     m_References:
     - 77ce6640ecb5a454f82a2f7f73c94663: {fileID: 1752287133}
@@ -19389,6 +19391,51 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: e2c12cc399276f34997617080b02d780, type: 3}
+--- !u!1 &2054578957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2054578959}
+  - component: {fileID: 2054578958}
+  m_Layer: 0
+  m_Name: Trocadecena
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &2054578958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054578957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d64dd849a4e5644819b19d64278590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NomedaCena: DentroDaEscola
+--- !u!4 &2054578959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054578957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 36.208748, y: 0.2241411, z: 3.7742867}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2057086595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19497,7 +19544,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.17229825, y: 0.1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.9249, y: -12.5}
+  m_AnchoredPosition: {x: -4.9249268, y: -12.5}
   m_SizeDelta: {x: 9.8501, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2060784192
