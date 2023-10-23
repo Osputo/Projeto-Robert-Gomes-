@@ -1,0 +1,2 @@
+Desculpa pessoal, mas eu meio que perdi quatro coisas no trabalho hoje:um Balde, um esfregão, sabonete e um par de luvas.
+    Estou um pouco desesperada para achá-los. Será que alguém poderia dar uma força na busca?
