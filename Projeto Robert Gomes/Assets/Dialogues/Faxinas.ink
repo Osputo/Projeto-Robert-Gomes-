@@ -1,0 +1,1 @@
+Desculpe incomodar, pessoal, mas eu perdi quatro coisas durante o trabalho hoje. Estou meio desesperada para encontrá-las. São 1 esfregão, 1 balde, 1 sabonete e um par de luvas. Será que alguém poderia me ajudar a procurá-los, por favor?
