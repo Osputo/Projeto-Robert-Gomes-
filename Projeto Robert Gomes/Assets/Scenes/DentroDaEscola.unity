@@ -32896,8 +32896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: 
-    sentences:
-    - "Eu estou a procura do meu ESFREG\xC3O, BALDE, SAB\xC3O E LUVA.\r\n"
+    sentences: []
   inkJSON: {fileID: 4900000, guid: 57e4717753594af4491ef4984c6ec825, type: 3}
   inkJSON2: {fileID: 4900000, guid: 8334379f9db4645428534aa9598aebf7, type: 3}
 --- !u!1001 &663301211
@@ -61210,8 +61209,8 @@ Transform:
   - {fileID: 928597386}
   - {fileID: 1471571701}
   - {fileID: 2087260771}
-  - {fileID: 1736954753}
   - {fileID: 2128179493}
+  - {fileID: 1736954753}
   - {fileID: 1309454101}
   - {fileID: 951347243}
   m_Father: {fileID: 0}

@@ -14,7 +14,7 @@ public class camControl : MonoBehaviour
     public float senseX=1.2f, senseY=1.2f;
     float smoothRotX = 0, smoothRotY=0;
     float smoothCoefX = 1.5f, smoothCoefY=1.5f;
-    float range = 1.7f;
+    float range = 0.7f;
     public GameObject inte;
 
     bookControler book;
