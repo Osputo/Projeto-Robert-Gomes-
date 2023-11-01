@@ -32872,20 +32872,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100104, guid: d83e07c47cb17454bbddbc5dd7574150, type: 3}
   m_PrefabInstance: {fileID: 1023080064}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &661137607
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661137604}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.908685
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.8345387, z: 0}
 --- !u!114 &661137608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47134,6 +47120,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400104, guid: d83e07c47cb17454bbddbc5dd7574150, type: 3}
   m_PrefabInstance: {fileID: 1023080064}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1023080066
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661137604}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.30486795, y: 2.2213175, z: 0.6032019}
+  m_Center: {x: 0.03157168, y: 0.6106586, z: 0.030242613}
 --- !u!1 &1024124362
 GameObject:
   m_ObjectHideFlags: 0
@@ -80711,8 +80710,7 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: d0b98f686092c2840b57c73b148a5725, type: 2}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92395,10 +92393,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.34583008
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0.028092265, y: 1, z: 0.010533279}
 --- !u!4 &1997254510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400104, guid: d83e07c47cb17454bbddbc5dd7574150, type: 3}
