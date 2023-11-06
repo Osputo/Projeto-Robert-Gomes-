@@ -86,6 +86,7 @@ namespace Photon.Pun.Demo.Asteroids
 
         public void DiconnectButton()
         {
+            PhotonNetwork.LeaveRoom();
             PhotonNetwork.Disconnect();
             this.SetActivePanel(LoginPanel.name);
         }

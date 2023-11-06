@@ -17242,6 +17242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: a door1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e7aacb82296e75c41acea0abba4c8978, type: 3}
+      propertyPath: m_TagString
+      value: Interact
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: e7aacb82296e75c41acea0abba4c8978, type: 3}
       propertyPath: m_TagString
       value: Interact
@@ -32868,20 +32872,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100104, guid: d83e07c47cb17454bbddbc5dd7574150, type: 3}
   m_PrefabInstance: {fileID: 1023080064}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &661137607
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661137604}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.908685
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.8345387, z: 0}
 --- !u!114 &661137608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47130,6 +47120,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400104, guid: d83e07c47cb17454bbddbc5dd7574150, type: 3}
   m_PrefabInstance: {fileID: 1023080064}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1023080066
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661137604}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.30486795, y: 2.2213175, z: 0.6032019}
+  m_Center: {x: 0.03157168, y: 0.6106586, z: 0.030242613}
 --- !u!1 &1024124362
 GameObject:
   m_ObjectHideFlags: 0
@@ -48941,7 +48944,7 @@ GameObject:
   - component: {fileID: 1075472364}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: NoteTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65592,8 +65595,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 1390999055}
   - {fileID: 1390999054}
+  - {fileID: 1390999055}
   sceneViewId: 63
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -65628,8 +65631,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.5658102, y: 2.3925147, z: 0.13787086}
-  m_Center: {x: -0.07437664, y: 1.1952002, z: 0.043578915}
+  m_Size: {x: 2.5658102, y: 2.3925147, z: 0.17878129}
+  m_Center: {x: -0.07437658, y: 1.1952002, z: 0.03403713}
 --- !u!1001 &1392140005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66305,39 +66308,6 @@ MonoBehaviour:
     sentences: []
   inkJSON: {fileID: 0}
   inkJSON2: {fileID: 0}
---- !u!114 &1399538068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399538064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b52a656e663b134ab6a35060e5b1c62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ani: {fileID: 0}
-  aim_point: {fileID: 1399538064}
-  execute_walking: 1
-  execute_sitting: 0
-  execute_stealing: 0
-  execute_picking_up: 0
-  execute_running: 0
-  walk_speed: 1
-  run_speed: 0
-  walk: 1
-  run: 0
-  sit: 0
-  steal: 0
-  pick_up: 0
-  destermine_new_aim: 0
-  crowbar: {fileID: 1457926260}
-  ready: 0
-  way_points: []
-  Sitting_points: []
-  Stealing_points: []
-  pick_up_points: []
 --- !u!65 &1399538069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68881,11 +68851,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4677248624428304, guid: 95b7030fe576ba84e930b6af82eb2738, type: 3}
   m_PrefabInstance: {fileID: 1456562405}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1457926260 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100102, guid: d83e07c47cb17454bbddbc5dd7574150, type: 3}
-  m_PrefabInstance: {fileID: 537883358}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1459320064
 PrefabInstance:
@@ -80745,8 +80710,7 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: d0b98f686092c2840b57c73b148a5725, type: 2}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86538,8 +86502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Pallaoro
-    sentences:
-    - So sei que UM aluno esta MENTINDO, e UM esta falando a VERDADE
+    sentences: []
   inkJSON: {fileID: 0}
   inkJSON2: {fileID: 0}
 --- !u!4 &1833006740 stripped
@@ -92417,12 +92380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Professora Beatrix
-    sentences:
-    - Tenho que descobrir quem ta mentindo.
-    - 'So sei que UM aluno esta MENTINDO, e UM esta falando a VERDADE
-
-'
-    - "Os outros eu n\xE3o fa\xE7o ideia.\n"
+    sentences: []
   inkJSON: {fileID: 4900000, guid: a592b9dc27fe6474dbaa97e800508b28, type: 3}
   inkJSON2: {fileID: 4900000, guid: c497065da1e6ee14a9c4cdcdeb29caaf, type: 3}
 --- !u!136 &1997254508
@@ -92435,10 +92393,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.34583008
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0.028092265, y: 1, z: 0.010533279}
 --- !u!4 &1997254510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400104, guid: d83e07c47cb17454bbddbc5dd7574150, type: 3}
