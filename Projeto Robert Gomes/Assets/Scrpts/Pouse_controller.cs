@@ -22,3 +22,4 @@ public class Pouse_controller : MonoBehaviour
         SceneManager.LoadScene(Menu);
     }
 }
+ 

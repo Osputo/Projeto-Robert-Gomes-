@@ -1,4 +1,9 @@
+
+
+
 VAR conversa = true
+
+
 
 {conversa:-> main|-> pergunta}
 
@@ -10,7 +15,7 @@ Pode me ajudar achando quem pegou a chave da 108?
 
 Ela esta com um dos alunos que estão na biblioteca.
 
-
+~ conversa = !conversa
 
 ->DONE
 
