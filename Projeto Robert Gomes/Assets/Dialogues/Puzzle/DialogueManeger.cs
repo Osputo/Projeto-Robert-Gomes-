@@ -24,6 +24,8 @@ public class DialogueManeger : MonoBehaviour
 
     private bool dialogueIsPlaying;
 
+    private dialogueVariable dialogueVariable;
+
     player player;
     private void Awake()
     {
@@ -34,6 +36,8 @@ public class DialogueManeger : MonoBehaviour
 
         }
         instance = this;
+
+        dialogueVariable = new dialogueVariable();
     }
 
     private void LateUpdate()
@@ -77,6 +81,7 @@ public class DialogueManeger : MonoBehaviour
         player.state = camState.dialogue;
         dialogueIsPlaying = true;
 
+        dialogueVariable.StarListening(currentStory);
 
         animator.SetBool("IsOpen", true);
 
@@ -92,6 +97,9 @@ public class DialogueManeger : MonoBehaviour
     private void ExitDialogueMode()
     {
         player.state = camState.normal;
+
+        dialogueVariable.StopListening(currentStory);
+
         dialogueIsPlaying = false;
 
         animator.SetBool("IsOpen", false);
