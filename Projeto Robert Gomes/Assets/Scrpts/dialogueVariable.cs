@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 public class dialogueVariable
 {
 
-    private Dictionary<string, Ink.Runtime.Object> variables;
+    public Dictionary<string, Ink.Runtime.Object> variables { get; private set; }
 
 
     public dialogueVariable(string globalsFilePath)
