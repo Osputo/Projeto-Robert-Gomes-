@@ -5,10 +5,15 @@ using UnityEngine.UI;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+using Ink.UnityIntegration;
 
 public class DialogueManeger : MonoBehaviour
 {
     private static DialogueManeger instance;
+
+    [Header("Global Ink File")]
+    [SerializeField] private InkFile globalsInkFile;
+
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject DialoguePanel;
@@ -24,7 +29,7 @@ public class DialogueManeger : MonoBehaviour
 
     private bool dialogueIsPlaying;
 
-    private dialogueVariable dialogueVariable;
+    private dialogueVariable dialogueVariables;
 
     player player;
     private void Awake()
@@ -37,7 +42,7 @@ public class DialogueManeger : MonoBehaviour
         }
         instance = this;
 
-        dialogueVariable = new dialogueVariable();
+        dialogueVariables = new dialogueVariable(globalsInkFile.filePath);
     }
 
     private void LateUpdate()
@@ -81,7 +86,7 @@ public class DialogueManeger : MonoBehaviour
         player.state = camState.dialogue;
         dialogueIsPlaying = true;
 
-        dialogueVariable.StarListening(currentStory);
+        dialogueVariables.StarListening(currentStory);
 
         animator.SetBool("IsOpen", true);
 
@@ -98,7 +103,7 @@ public class DialogueManeger : MonoBehaviour
     {
         player.state = camState.normal;
 
-        dialogueVariable.StopListening(currentStory);
+        dialogueVariables.StopListening(currentStory);
 
         dialogueIsPlaying = false;
 
