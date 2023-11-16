@@ -16,7 +16,8 @@ public class DialogueTriger : MonoBehaviour
     {
         //FindObjectOfType<DialogueManeger>().StartDialogue(dialogue);
 
-        DialogueManeger.GetInstance().EnterDialogueMode(inkJSON);
+        
+        DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
 
     }
 
