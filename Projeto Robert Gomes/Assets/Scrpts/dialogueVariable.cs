@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 
 public class dialogueVariable
 {
+<<<<<<< Updated upstream
 
     public Dictionary<string, Ink.Runtime.Object> variables { get; private set; }
 
@@ -68,3 +69,8 @@ public class dialogueVariable
         }
     }
 }
+=======
+    
+
+}
+>>>>>>> Stashed changes
