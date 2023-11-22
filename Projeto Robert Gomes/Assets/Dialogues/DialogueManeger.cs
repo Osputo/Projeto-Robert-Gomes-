@@ -64,7 +64,7 @@ public class DialogueManeger : MonoBehaviour
     {
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
-        anim.SetBool("open", !anim.GetBool("open"));
+        anim.SetBool("IsOpen", !anim.GetBool("IsOpen"));
 
         ContinueStory();
 
@@ -73,7 +73,7 @@ public class DialogueManeger : MonoBehaviour
     private void ExitDialogueMode()
     {
         dialogueIsPlaying=false;
-        anim.SetBool("open", !anim.GetBool("open"));
+        anim.SetBool("IsOpen", !anim.GetBool("IsOpen"));
         dialogueText.text = "";
     }
 
