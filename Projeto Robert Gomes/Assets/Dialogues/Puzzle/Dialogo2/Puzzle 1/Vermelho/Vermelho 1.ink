@@ -1,2 +1,2 @@
 É o seguinte.
-Alguem ta tentando te confudir, Falando uma meia verdade.
+Alguém está tentando te confundir, falando uma meia verdade.
