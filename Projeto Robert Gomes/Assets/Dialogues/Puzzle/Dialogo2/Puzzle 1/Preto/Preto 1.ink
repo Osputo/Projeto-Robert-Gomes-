@@ -1,2 +1,2 @@
 Então...
-So sei que quem mentiu está com a chave. 
+Só sei que quem mentiu está com a chave. 
