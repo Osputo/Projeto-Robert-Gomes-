@@ -27,7 +27,7 @@ public class DialogueManeger : MonoBehaviour
         {
             Debug.LogWarning("Found more then one Dialogue Maneger in the scene");
         }
-
+        anim = GetComponent<Animator>();
 
         instance = this; 
     }
@@ -42,7 +42,7 @@ public class DialogueManeger : MonoBehaviour
     private void Start()
     {
 
-        anim = GetComponent<Animator>();
+        
         dialogueIsPlaying = false;
     }
 
