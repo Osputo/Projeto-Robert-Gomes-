@@ -283,6 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 7341840569170680403}
   dialogueText: {fileID: 7341840568791941957}
+  anim: {fileID: 7341840569170680401}
 --- !u!1 &8589095481693682575
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +972,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &7341840569170680401 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 75426826, guid: af8b245e180acc847977b5d32d998af5, type: 3}
+  m_PrefabInstance: {fileID: 7341840569230341723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7341840569170680403 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 75426824, guid: af8b245e180acc847977b5d32d998af5, type: 3}

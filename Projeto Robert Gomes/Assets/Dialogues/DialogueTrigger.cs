@@ -13,6 +13,8 @@ public class DialogueTrigger : MonoBehaviour
 
     public void Interaction()
     {
+
+        Debug.Log("PInto?");
         DialogueManeger.GetInstance().EnterDialogueMode(inkJson);
     }
     public void Interaction2()

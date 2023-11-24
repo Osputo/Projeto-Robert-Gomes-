@@ -15,7 +15,7 @@ public class DialogueManeger : MonoBehaviour
 
     private Story currentStory;
 
-    Animator anim;
+    public Animator anim;
 
     private bool dialogueIsPlaying;
 
@@ -27,7 +27,7 @@ public class DialogueManeger : MonoBehaviour
         {
             Debug.LogWarning("Found more then one Dialogue Maneger in the scene");
         }
-        anim = GetComponent<Animator>();
+        
 
         instance = this; 
     }
@@ -62,6 +62,7 @@ public class DialogueManeger : MonoBehaviour
 
     public void EnterDialogueMode(TextAsset inkJSON)
     {
+        Debug.Log("HAHAHAHAHAH");
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         anim.SetBool("IsOpen", !anim.GetBool("IsOpen"));
