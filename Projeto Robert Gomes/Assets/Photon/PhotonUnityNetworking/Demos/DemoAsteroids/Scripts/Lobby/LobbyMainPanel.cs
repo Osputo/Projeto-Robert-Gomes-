@@ -276,7 +276,7 @@ namespace Photon.Pun.Demo.Asteroids
             PhotonNetwork.CurrentRoom.IsOpen = false;
             PhotonNetwork.CurrentRoom.IsVisible = false;
 
-            PhotonNetwork.LoadLevel("DentroDaEscola");
+            PhotonNetwork.LoadLevel("School");
         }
 
         #endregion
