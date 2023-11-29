@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 public class Passcode : MonoBehaviour
 {
     string Code = "123";
     string Nr = null;
     int NrIndex = 0;
     string alpha;
-    public Text UiText = null;
 
+    public TMP_Text UiText = null;
     public void CodeFunction(string Numbers)
     {
         NrIndex++;
