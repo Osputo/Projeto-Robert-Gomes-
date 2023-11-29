@@ -721,6 +721,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teclado
       objectReference: {fileID: 0}
+    - target: {fileID: 6817034310982446266, guid: 084641e949a38644cbd13d73ce7e43d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 084641e949a38644cbd13d73ce7e43d7, type: 3}
 --- !u!1001 &7341840569230341723

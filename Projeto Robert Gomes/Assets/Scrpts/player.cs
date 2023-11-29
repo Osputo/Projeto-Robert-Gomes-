@@ -19,7 +19,7 @@ public class player : MonoBehaviour
     public float forwardSpeed = 5, strafeSpeed = 2;
     public float maxJumpHeight = 2, timeToMaxHeight = 0.5f;
 
-    public GameObject book;
+    public GameObject book, keypad;
     public GameObject pause;
 
     public camState state = camState.normal;
@@ -133,8 +133,19 @@ public class player : MonoBehaviour
                 vertical = (jumpSpeed * 3) * Vector3.up;
             }
         }
-            
+    }
 
+    public void EnterInKeypad()
+    {
+        keypad.gameObject.SetActive(true);
+        state = camState.dialogue;
+
+        if (Input.GetButtonDown("Pause"))
+        {
+            keypad.gameObject.SetActive(false);
+            state = camState.dialogue;
+        }
 
     }
+
 }
