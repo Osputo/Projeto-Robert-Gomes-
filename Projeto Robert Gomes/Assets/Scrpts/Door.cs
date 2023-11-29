@@ -18,7 +18,7 @@ public class Door : MonoBehaviour
     {     
         anim = GetComponent<Animator>();      
         phview = GetComponent<PhotonView>();
-        chave = false;
+        
     }
 
     private void LateUpdate()
