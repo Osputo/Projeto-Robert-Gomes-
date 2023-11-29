@@ -9,6 +9,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private DialogueUIController _dialogueUIController;
     [SerializeField] private DialogueUIController _dialogueUIController1_5;
     [SerializeField] private DialogueUIController _dialogueUIController2;
+    [SerializeField] private DialogueUIController _dialogueUIController2_5;
     public void Interaction()
     {
 
@@ -20,5 +21,8 @@ public class DialogueTrigger : MonoBehaviour
     public void Interaction2()
     {
         _dialogueUIController2.ShowDialogueUI();
+
+
+        _dialogueUIController2_5.ShowDialogueUI();
     }
 }
