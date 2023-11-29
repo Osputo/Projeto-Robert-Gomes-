@@ -11,11 +11,14 @@ public class Door : MonoBehaviour
     PhotonView phview;
     Player2 player2;
 
+    public bool chave;
+
     // Start is called before the first frame update
     void Start()
     {     
         anim = GetComponent<Animator>();      
         phview = GetComponent<PhotonView>();
+        chave = false;
     }
 
     private void LateUpdate()
@@ -24,6 +27,13 @@ public class Door : MonoBehaviour
         player = FindObjectOfType(typeof(player)) as player;
     }
     // Update is called once per frame
+
+
+    public void open()
+    {
+        chave = true;
+    }
+
     public void Interaction()
     {
 
@@ -36,6 +46,7 @@ public class Door : MonoBehaviour
 
     public void Interaction2()
     {
+
         phview.RPC("DoorRPC", RpcTarget.AllBuffered);
         GetComponent<PhotonView>().RPC("RPCInteract", RpcTarget.AllBuffered);
 
@@ -43,6 +54,14 @@ public class Door : MonoBehaviour
     [PunRPC]
     public void DoorRPC()
     {
+
+        if(chave == true)
+        {
             anim.SetBool("open", !anim.GetBool("open"));
+        }
+        if(chave == false) 
+        {
+            anim.SetTrigger("loked");
+        }
     }
 }
