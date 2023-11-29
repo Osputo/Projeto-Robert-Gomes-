@@ -13,7 +13,7 @@ public class KeypadAtivator : MonoBehaviour
         player = FindObjectOfType(typeof(player)) as player;
     }
 
-    public void Interaction2()
+    public void Interaction()
     {
         player.EnterInKeypad();
     }
