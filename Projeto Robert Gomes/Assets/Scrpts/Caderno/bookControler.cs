@@ -11,7 +11,6 @@ public class bookControler : MonoBehaviour
 
     public GameObject[] content;
     [SerializeField] bool[] activateContent;
-
     public GameObject notification;
     public bool notificationOn;
     // Start is called before the first frame update
@@ -59,6 +58,12 @@ public class bookControler : MonoBehaviour
 
         if (activateContent[10])
             content[11].SetActive(true); //Luva
+
+
+        if (content[8] == true && content[9] == true && content[10] == true && content[11] == true)
+        {
+
+        }
 
         if (activateContent[11])
         {
@@ -128,6 +133,8 @@ public class bookControler : MonoBehaviour
         {
             content[24].SetActive(true); //Depois de abrir o auditório
         }
+
+
             
     }
 

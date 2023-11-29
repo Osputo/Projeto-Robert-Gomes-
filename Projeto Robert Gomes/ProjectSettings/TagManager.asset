@@ -10,6 +10,7 @@ TagManager:
   - stealingpoint
   - pickuppoint
   - NoteTrigger
+  - invisible_Wall
   layers:
   - Default
   - TransparentFX
