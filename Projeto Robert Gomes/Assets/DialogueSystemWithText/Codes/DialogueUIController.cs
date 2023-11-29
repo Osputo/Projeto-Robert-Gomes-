@@ -65,6 +65,8 @@ namespace DialogueSystemWithText
         public List<DialogueContent> DialogueContents { get => _dialogueContents; set => _dialogueContents = value; }
         public DialogueContent FirstDialogueContent { get => _firstDialogueContent; set => _firstDialogueContent = value; }
 
+        player player;
+
         private void Awake()
         {
             _canvas = GetComponent<Canvas>();
@@ -76,6 +78,11 @@ namespace DialogueSystemWithText
                 FontTypingSpeed = 0f;
 
             _fontTypingOriginalSpeed = FontTypingSpeed;
+        }
+
+        private void LateUpdate()
+        {
+            player = FindObjectOfType(typeof(player)) as player;
         }
 
         private void Update()
@@ -126,9 +133,13 @@ namespace DialogueSystemWithText
         /// <param name="dialogueContent">The dialogue that will be displayed in the DialogueUICanvas.</param>
         private void StartDialogue(DialogueContent dialogueContent)
         {
+
+            player.state = camState.dialogue;
             dialogueContent.InvokeDialogueStartEvent();
             ClearDialogueOptions();
             SetDialogue(dialogueContent);
+
+
         }
 
         /// <summary>Method to disables some of the UIs components of the DialogueUICanvas.</summary>
@@ -325,6 +336,7 @@ namespace DialogueSystemWithText
             }
             else
             {
+                player.state = camState.normal;
                 HideDialogueUI();
             }
         }
